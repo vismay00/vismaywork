@@ -52,7 +52,7 @@ const Projects = () => {
     {
       title: "Private Travel Journal",
       description: "Full-Stack Team Project",
-      longDescription: "Collaborative development of a private travel journaling application. Working with a team to create a comprehensive solution for travel enthusiasts to document their experiences.",
+      longDescription: "Collaborative development of a private travel journaling application. Working with a team to create a comprehensive solution for travel enthusiasts to document their experiences with rich media and location tracking.",
       icon: <BookOpen className="h-6 w-6" />,
       technologies: ["React", "Node.js", "MongoDB", "Express"],
       features: [
