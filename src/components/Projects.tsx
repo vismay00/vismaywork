@@ -72,25 +72,25 @@ const Projects = () => {
       priority: "high"
     },
     {
-      title: "Task Manager App",
-      description: "Android Development Project",
-      longDescription: "Native Android application for task management with modern Material Design principles. Features offline functionality, cloud sync, and intuitive gesture-based interactions.",
-      icon: <Smartphone className="h-6 w-6" />,
-      technologies: ["Kotlin", "Android SDK", "Room Database", "Material Design"],
+      title: "Travel Journal App",
+      description: "Mobile Travel Documentation",
+      longDescription: "Cross-platform mobile application for documenting travel experiences. Features offline photo storage, location tracking, and beautiful journal entries with weather integration.",
+      icon: <BookOpen className="h-6 w-6" />,
+      technologies: ["React Native", "TypeScript", "SQLite", "GPS API"],
       features: [
-        "Material Design UI",
-        "Offline Functionality",
-        "Cloud Synchronization",
-        "Gesture Controls",
-        "Dark Mode Support",
-        "Widget Integration"
+        "Offline Photo Storage",
+        "GPS Location Tracking",
+        "Weather Integration",
+        "Cross-platform Support",
+        "Cloud Backup",
+        "Interactive Maps"
       ],
-      role: "Android Developer",
+      role: "Mobile Developer",
       status: "In Development",
       statusColor: "bg-green-500/20 text-green-400 border-green-500/30",
       link: "#",
       github: "#",
-      image: "📱",
+      image: "📖",
       priority: "medium"
     }
   ];
