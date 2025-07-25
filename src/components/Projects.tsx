@@ -70,6 +70,28 @@ const Projects = () => {
       github: "#",
       image: "✈️",
       priority: "high"
+    },
+    {
+      title: "Task Manager App",
+      description: "Android Development Project",
+      longDescription: "Native Android application for task management with modern Material Design principles. Features offline functionality, cloud sync, and intuitive gesture-based interactions.",
+      icon: <Smartphone className="h-6 w-6" />,
+      technologies: ["Kotlin", "Android SDK", "Room Database", "Material Design"],
+      features: [
+        "Material Design UI",
+        "Offline Functionality",
+        "Cloud Synchronization",
+        "Gesture Controls",
+        "Dark Mode Support",
+        "Widget Integration"
+      ],
+      role: "Android Developer",
+      status: "In Development",
+      statusColor: "bg-green-500/20 text-green-400 border-green-500/30",
+      link: "#",
+      github: "#",
+      image: "📱",
+      priority: "medium"
     }
   ];
 
