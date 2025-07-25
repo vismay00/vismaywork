@@ -1,5 +1,5 @@
 import { GraduationCap, MapPin, Heart, Calendar, Code2, Trophy } from "lucide-react";
-import profileImage from "@/assets/profile-vismay.jpg";
+import profileImage from "@/assets/profile-vismay-new.jpg";
 
 const About = () => {
   const stats = [
@@ -61,6 +61,7 @@ const About = () => {
                   src={profileImage} 
                   alt="Vismay Bhaskar" 
                   className="w-full h-full object-cover rounded-2xl"
+                  style={{ clipPath: 'inset(0 round 1rem)' }}
                 />
               </div>
               
