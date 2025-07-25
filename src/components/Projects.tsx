@@ -64,8 +64,8 @@ const Projects = () => {
         "Material Design 3"
       ],
       role: "Android Developer",
-      status: "In Progress",
-      statusColor: "bg-blue-500/20 text-blue-400 border-blue-500/30",
+      status: "Completed",
+      statusColor: "bg-accent text-accent-foreground",
       link: "#",
       github: "#",
       image: "✈️",
