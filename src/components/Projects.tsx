@@ -51,19 +51,19 @@ const Projects = () => {
     },
     {
       title: "Private Travel Journal",
-      description: "Full-Stack Team Project",
-      longDescription: "Collaborative development of a private travel journaling application. Working with a team to create a comprehensive solution for travel enthusiasts to document their experiences with rich media and location tracking.",
+      description: "Android App Dev Team Project",
+      longDescription: "Collaborative Android development project creating a private travel journaling application. Working with a team to build a native Android app with modern architecture patterns and Material Design principles.",
       icon: <BookOpen className="h-6 w-6" />,
-      technologies: ["React", "Node.js", "MongoDB", "Express"],
+      technologies: ["Kotlin", "Android SDK", "Room Database", "Material Design"],
       features: [
-        "Private Journal Entries",
-        "Location Tagging",
+        "Native Android UI",
+        "Local Data Storage",
         "Photo Integration",
         "Team Collaboration",
-        "Real-time Sync",
-        "Secure Data Storage"
+        "MVVM Architecture",
+        "Material Design 3"
       ],
-      role: "Full-Stack Developer",
+      role: "Android Developer",
       status: "In Progress",
       statusColor: "bg-blue-500/20 text-blue-400 border-blue-500/30",
       link: "#",
