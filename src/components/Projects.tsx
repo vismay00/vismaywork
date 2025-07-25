@@ -71,28 +71,6 @@ const Projects = () => {
       image: "✈️",
       priority: "high"
     },
-    {
-      title: "Travel Journal App",
-      description: "Mobile Travel Documentation",
-      longDescription: "Cross-platform mobile application for documenting travel experiences. Features offline photo storage, location tracking, and beautiful journal entries with weather integration.",
-      icon: <BookOpen className="h-6 w-6" />,
-      technologies: ["React Native", "TypeScript", "SQLite", "GPS API"],
-      features: [
-        "Offline Photo Storage",
-        "GPS Location Tracking",
-        "Weather Integration",
-        "Cross-platform Support",
-        "Cloud Backup",
-        "Interactive Maps"
-      ],
-      role: "Mobile Developer",
-      status: "In Development",
-      statusColor: "bg-green-500/20 text-green-400 border-green-500/30",
-      link: "#",
-      github: "#",
-      image: "📖",
-      priority: "medium"
-    }
   ];
 
   return (
