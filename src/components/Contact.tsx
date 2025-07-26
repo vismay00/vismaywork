@@ -6,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Mail, Github, Linkedin, Send, Phone, MapPin, Calendar } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -14,25 +15,43 @@ const Contact = () => {
     subject: "",
     message: ""
   });
+  const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsLoading(true);
     
-    // Create mailto link with form data
-    const subject = formData.subject || `Portfolio Contact from ${formData.name}`;
-    const body = `Name: ${formData.name}\nEmail: ${formData.email}\n\nSubject: ${formData.subject}\n\nMessage:\n${formData.message}`;
-    const mailtoLink = `mailto:vismayvichuzz10@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    
-    window.open(mailtoLink);
-    
-    toast({
-      title: "Email client opened!",
-      description: "Your default email client should open with the pre-filled message.",
-    });
-    
-    // Reset form
-    setFormData({ name: "", email: "", subject: "", message: "" });
+    try {
+      await emailjs.send(
+        'service_2fywgj4', // Service ID
+        'template_lwg97eb', // Template ID
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          subject: formData.subject || `Portfolio Contact from ${formData.name}`,
+          message: formData.message,
+        },
+        'fMgApmdwdOs0Z_LgZ' // Public Key
+      );
+      
+      toast({
+        title: "Message sent successfully!",
+        description: "Thank you for your message. I'll get back to you soon.",
+      });
+      
+      // Reset form
+      setFormData({ name: "", email: "", subject: "", message: "" });
+    } catch (error) {
+      console.error('EmailJS Error:', error);
+      toast({
+        title: "Failed to send message",
+        description: "Please try again or contact me directly via email.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -234,11 +253,12 @@ const Contact = () => {
 
                   <Button 
                     type="submit" 
-                    className="w-full bg-primary hover:bg-primary/90 hover:scale-105 transition-all duration-300 text-lg py-6"
+                    disabled={isLoading}
+                    className="w-full bg-primary hover:bg-primary/90 hover:scale-105 transition-all duration-300 text-lg py-6 disabled:opacity-50 disabled:cursor-not-allowed"
                     size="lg"
                   >
                     <Send className="mr-3 h-5 w-5" />
-                    Send Message
+                    {isLoading ? "Sending..." : "Send Message"}
                   </Button>
 
                   <p className="text-sm text-muted-foreground text-center">
