@@ -54,7 +54,7 @@ const Projects = () => {
       description: "Android App Dev Team Project",
       longDescription: "Collaborative Android development project creating a private travel journaling application. Working with a team to build a native Android app with modern architecture patterns and Material Design principles.",
       icon: <BookOpen className="h-6 w-6" />,
-      technologies: ["Kotlin", "Android SDK", "Room Database", "Material Design"],
+      technologies: ["Flutter", "Dart", "SQLite", "Material Design"],
       features: [
         "Native Android UI",
         "Local Data Storage",
