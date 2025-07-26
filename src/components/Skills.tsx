@@ -95,11 +95,11 @@ const Skills = () => {
           {skillCategories.map((category, index) => (
             <Card 
               key={index}
-              className="bg-card/30 backdrop-blur-md border border-border/50 hover:bg-card/50 hover:border-primary/30 transition-all duration-500 group"
+              className="bg-card/30 backdrop-blur-md border border-border/50 hover:bg-card/50 hover:border-primary/30 transition-all duration-500 group stagger-item animate-scale-up hover-lift card-shimmer"
             >
               <CardHeader className="pb-4">
                 <CardTitle className="flex items-center space-x-3 text-xl">
-                  <div className={`p-3 rounded-xl ${category.color} group-hover:scale-110 transition-transform duration-300`}>
+                  <div className={`p-3 rounded-xl ${category.color} group-hover:scale-110 group-hover:rotate-6 transition-all duration-300`}>
                     {category.icon}
                   </div>
                   <span className="group-hover:text-primary transition-colors">
@@ -117,10 +117,11 @@ const Skills = () => {
                     </div>
                     <div className="w-full bg-muted/30 rounded-full h-2 overflow-hidden">
                       <div 
-                        className={`h-full ${skill.color} rounded-full transition-all duration-1000 ease-out relative overflow-hidden`}
+                        className={`h-full ${skill.color} rounded-full transition-all duration-1000 ease-out relative overflow-hidden progress-bar hover-glow`}
                         style={{ width: `${skill.level}%` }}
                       >
                         <div className="absolute inset-0 bg-white/20 animate-pulse"></div>
+                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent animate-shimmer"></div>
                       </div>
                     </div>
                   </div>
@@ -159,13 +160,13 @@ const Skills = () => {
               <Badge 
                 key={index}
                 variant="outline"
-                className={`text-sm py-2 px-4 transition-all duration-300 cursor-default ${
+                className={`text-sm py-2 px-4 transition-all duration-300 cursor-default stagger-item animate-scale-up hover-scale hover-glow ${
                   skill.priority === 'high' 
                     ? 'bg-primary/10 border-primary/30 text-primary hover:bg-primary/20' 
                     : skill.priority === 'learning'
                     ? 'bg-orange-500/10 border-orange-500/30 text-orange-400 hover:bg-orange-500/20'
                     : 'bg-card/50 border-border/50 hover:bg-card hover:border-primary/20'
-                } hover:scale-105`}
+                } hover:scale-105 hover:animate-wiggle`}
               >
                 {skill.name}
                 {skill.priority === 'high' && <Star className="ml-1 h-3 w-3 fill-current" />}
@@ -176,7 +177,7 @@ const Skills = () => {
         </div>
 
         {/* Certifications */}
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto animate-fade-up animation-delay-600">
           <h3 className="text-2xl font-bold text-center mb-8 text-foreground">
             Certifications & Learning
           </h3>
@@ -185,11 +186,11 @@ const Skills = () => {
             {certifications.map((cert, index) => (
               <Card 
                 key={index}
-                className="bg-card/30 backdrop-blur-md border border-border/50 hover:bg-card/50 hover:border-primary/30 transition-all duration-300 group text-center"
+                className="bg-card/30 backdrop-blur-md border border-border/50 hover:bg-card/50 hover:border-primary/30 transition-all duration-300 group text-center stagger-item animate-slide-up hover-lift"
               >
                 <CardContent className="p-6">
                   <div className="mb-3">
-                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:bg-primary/20 transition-colors">
+                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:bg-primary/20 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300">
                       <Star className="h-6 w-6 text-primary" />
                     </div>
                   </div>

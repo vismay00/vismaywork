@@ -279,13 +279,13 @@ const Contact = () => {
               Let's discuss how we can collaborate and build something amazing together.
             </p>
             <div className="flex flex-wrap justify-center gap-3">
-              <Button className="bg-primary hover:bg-primary/90" asChild>
+              <Button className="bg-primary hover:bg-primary/90 hover-scale hover-glow" asChild>
                 <a href="mailto:vismayvichuzz10@gmail.com">
                   <Mail className="h-4 w-4 mr-2" />
                   Email Me Directly
                 </a>
               </Button>
-              <Button variant="outline" className="bg-card/50 border-border/50 hover:bg-card hover:border-primary/50" asChild>
+              <Button variant="outline" className="bg-card/50 border-border/50 hover:bg-card hover:border-primary/50 hover-scale" asChild>
                 <a href="https://linkedin.com/in/vismay-bhaskar" target="_blank" rel="noopener noreferrer">
                   <Linkedin className="h-4 w-4 mr-2" />
                   Connect on LinkedIn

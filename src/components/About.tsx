@@ -41,7 +41,7 @@ const About = () => {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16 animate-fade-up">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 gradient-text">
             About Me
           </h2>
@@ -54,8 +54,8 @@ const About = () => {
           {/* Enhanced Profile Section */}
           <div className="flex flex-col items-center lg:items-end space-y-8">
             {/* Profile Image with enhanced styling */}
-            <div className="relative group">
-              <div className="absolute -inset-4 bg-gradient-to-r from-primary to-accent rounded-3xl blur-lg opacity-20 group-hover:opacity-40 transition-opacity duration-500"></div>
+            <div className="relative group hover-lift">
+              <div className="absolute -inset-4 bg-gradient-to-r from-primary to-accent rounded-3xl blur-lg opacity-20 group-hover:opacity-40 transition-opacity duration-500 animate-glow-pulse"></div>
               <div className="relative w-80 h-80 rounded-3xl overflow-hidden bg-card/30 backdrop-blur-md border border-border/50 p-2">
                 <img 
                   src={profileImage} 
@@ -79,9 +79,9 @@ const About = () => {
               {stats.map((stat, index) => (
                 <div 
                   key={index}
-                  className="text-center p-4 bg-card/30 backdrop-blur-md border border-border/50 rounded-2xl hover:bg-card/50 transition-all duration-300 group"
+                  className="text-center p-4 bg-card/30 backdrop-blur-md border border-border/50 rounded-2xl hover:bg-card/50 transition-all duration-300 group interactive-card stagger-item animate-scale-up"
                 >
-                  <stat.icon className="h-6 w-6 mx-auto mb-2 text-primary group-hover:scale-110 transition-transform" />
+                  <stat.icon className="h-6 w-6 mx-auto mb-2 text-primary group-hover:scale-110 group-hover:rotate-12 transition-all duration-300" />
                   <div className="text-2xl font-bold text-foreground mb-1">{stat.value}</div>
                   <div className="text-xs text-muted-foreground">{stat.label}</div>
                 </div>
@@ -90,7 +90,7 @@ const About = () => {
           </div>
 
           {/* Enhanced Content Section */}
-          <div className="space-y-8">
+          <div className="space-y-8 animate-slide-left">
             {/* Bio with better typography */}
             <div className="space-y-6">
               <div className="prose prose-lg max-w-none">
@@ -118,7 +118,7 @@ const About = () => {
               {highlights.map((item, index) => (
                 <div 
                   key={index}
-                  className="group p-6 bg-card/30 backdrop-blur-md border border-border/50 rounded-2xl hover:bg-card/50 hover:border-primary/30 transition-all duration-300"
+                  className="group p-6 bg-card/30 backdrop-blur-md border border-border/50 rounded-2xl hover:bg-card/50 hover:border-primary/30 transition-all duration-300 stagger-item animate-slide-up hover-lift card-shimmer"
                 >
                   <div className="flex items-start space-x-4">
                     <div className={`p-3 rounded-xl ${item.color} group-hover:scale-110 transition-transform duration-300`}>
